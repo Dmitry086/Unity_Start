@@ -17,10 +17,10 @@ public class Create_Heal_kit : MonoBehaviour
         InvokeRepeating("Check_Heal_kit_1", 15f * Time.deltaTime, 10f);
         InvokeRepeating("Check_Heal_kit_2", 15f * Time.deltaTime, 20f);
     }
-    void Update()
-    {
+    //void Update()
+    //{
 
-    }
+    //}
     void Check_Heal_kit_1()
     {
         if (!heal_kit_1)

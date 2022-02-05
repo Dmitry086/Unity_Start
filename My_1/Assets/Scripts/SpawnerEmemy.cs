@@ -19,10 +19,10 @@ public class SpawnerEmemy : MonoBehaviour
         StartSpawn();
     }
 
-    void Update()
-    {
+    //void Update()
+    //{
 
-    }
+    //}
 
     void StartSpawn()
     {

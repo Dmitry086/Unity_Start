@@ -4,15 +4,39 @@ using UnityEngine;
 
 public class MoveController : MonoBehaviour
 {
-    [SerializeField]
-    private float Speed = 1;
-    // Start is called before the first frame update
+    [SerializeField] private float Speed;
+                     private float SpeedP;
+    [SerializeField] private float PowerJump = 0f;
+    [SerializeField] private bool isGraunded;
+    
+    private void RunSpeed()
+    {
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            SpeedP = Speed + 5f;
+        }
+        else
+        {
+            SpeedP = Speed;
+        }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(collision.gameObject.tag == "Graund")
+            isGraunded = true;
+    }
+    private void OnCollisionExit(Collision collision)
+    {
+        if (collision.gameObject.tag == "Graund")
+            isGraunded = false;
+    }
+   
     void OnTriggerEnter(Collider other)
     {
         print(other.gameObject.name);
-        //string hk = other.gameObject.name;
 
-        if (other.gameObject.name == "Heal_kit(Clone)")
+        if (other.gameObject.name == "eat Heal_kit(Clone)")
         {
             Destroy(other.gameObject);
         }
@@ -25,15 +49,15 @@ public class MoveController : MonoBehaviour
     {
         
     }
-
-    // Update is called once per frame
     void Update()
     {
         var a = Input.GetAxis("Horizontal");
         var b = Input.GetAxis("Vertical");
+        var c = Input.GetAxis("Jump");
 
-        var derectian = new Vector3(a, 0, b);
-
-        transform.Translate(Speed * derectian * Time.deltaTime);
+        //if (isGraunded == false) c = 0f;
+        var derectian = new Vector3(a, c * PowerJump, b);
+        RunSpeed();
+        transform.Translate(SpeedP * derectian * Time.deltaTime);
     }
 }
