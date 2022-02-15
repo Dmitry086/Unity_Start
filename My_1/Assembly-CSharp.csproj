@@ -56,6 +56,8 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Create_Heal_kit.cs" />
     <Compile Include="Assets\Scripts\Eat_Heal_Kit.cs" />
+    <Compile Include="Assets\Scripts\HealthPoints.cs" />
+    <Compile Include="Assets\Scripts\LifeTimeBall.cs" />
     <Compile Include="Assets\Scripts\MoveController.cs" />
     <Compile Include="Assets\Scripts\Open_Door_1.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
@@ -63,6 +65,7 @@
     <Compile Include="Assets\Scripts\SpawnerEmemy.cs" />
     <Compile Include="Assets\Scripts\SpawnerHealKit.cs" />
     <Compile Include="Assets\Scripts\Take_som_player.cs" />
+    <Compile Include="Assets\Scripts\Test.cs" />
     <Compile Include="Assets\Scripts\TrackingRotation.cs" />
     <Compile Include="Assets\Scripts\control_gates_up_down.cs" />
     <Compile Include="Assets\Scripts\gates_up_down.cs" />
