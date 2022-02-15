@@ -4,12 +4,9 @@ using UnityEngine;
 
 public class SpawnerEmemy : MonoBehaviour
 {
-    [SerializeField]
-    private GameObject[] enemyM;
-    [SerializeField]
-    private Transform[] spawnPoint;
-    [SerializeField]
-    private int totalEnemy;
+    [SerializeField] private GameObject[] enemyM;
+    [SerializeField] private Transform[] spawnPoint;
+    [SerializeField] private int totalEnemy;
 
     private int randEnemy;
     private int randPoint;
