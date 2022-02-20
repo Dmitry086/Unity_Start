@@ -8,6 +8,8 @@ TagManager:
   - HealKit
   - Mines
   - BallBullet
+  - EnemyTrap
+  - GateTrap
   layers:
   - Default
   - TransparentFX

@@ -3,18 +3,51 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Test : MonoBehaviour
-{
-    int a = 1;
-    int b = 0;
 
-    // Update is called once per frame
-    void Update()
+{
+    [SerializeField] private GameObject prefabEnemyMelee;
+    [SerializeField] private Transform[] spawnPointMelee;
+    [SerializeField] private GameObject prefabEnemyRange;
+    [SerializeField] private Transform[] spawnPointRange;
+    [SerializeField] bool Player_in = false;
+    public int EnemyCont;
+
+    void OnTriggerEnter(Collider collision)
     {
-        while(b <= 5)
+        if (collision.gameObject.tag == "Player")
         {
-            Debug.Log(a);
-            a++;
-            b++;
+            Player_in = true;
+            StartSpawnMelee();
+            StartSpawnRange();
         }
     }
+    void OnTriggerExit(Collider collision)
+    {
+        Player_in = false;
+    }
+
+    void StartSpawnMelee()
+    {
+        for (int i = 0; i < spawnPointMelee.Length; i++)
+        {
+            Instantiate(prefabEnemyMelee, spawnPointMelee[i].transform.position, Quaternion.identity);
+            EnemyCont++;
+        }
+
+    }
+    void StartSpawnRange()
+    {
+        for (int i = 0; i < spawnPointRange.Length; i++)
+        {
+            Instantiate(prefabEnemyRange, spawnPointRange[i].transform.position, Quaternion.identity);
+            EnemyCont++;
+        }
+
+    }
+
+
+
+
+
 }
+

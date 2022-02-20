@@ -14,7 +14,7 @@ public class SpawnerHealKit : MonoBehaviour
 
     void StartSpawn()
     {
-        for (int i = 0; i <= spawnPoint.Length; i++)
+        for (int i = 0; i < spawnPoint.Length; i++)
         {
             Instantiate(prefabHealKit, spawnPoint[i].transform.position, Quaternion.identity);
         }

@@ -56,12 +56,16 @@
     <Compile Include="Assets\Scripts\CameraController.cs" />
     <Compile Include="Assets\Scripts\Create_Heal_kit.cs" />
     <Compile Include="Assets\Scripts\Eat_Heal_Kit.cs" />
+    <Compile Include="Assets\Scripts\Gate_rotation.cs" />
+    <Compile Include="Assets\Scripts\HPEnemyTrap.cs" />
     <Compile Include="Assets\Scripts\HealthPoints.cs" />
     <Compile Include="Assets\Scripts\LifeTimeBall.cs" />
     <Compile Include="Assets\Scripts\MoveController.cs" />
     <Compile Include="Assets\Scripts\Open_Door_1.cs" />
     <Compile Include="Assets\Scripts\Rotate.cs" />
     <Compile Include="Assets\Scripts\Shoot_Ball.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemy_trap.cs" />
+    <Compile Include="Assets\Scripts\SpawnEnemy_trap_Range.cs" />
     <Compile Include="Assets\Scripts\SpawnerEmemy.cs" />
     <Compile Include="Assets\Scripts\SpawnerHealKit.cs" />
     <Compile Include="Assets\Scripts\Take_som_player.cs" />
